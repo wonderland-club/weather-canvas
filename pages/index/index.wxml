@@ -1,0 +1,24 @@
+<view>
+  <view class="titleTop">
+    <view>{{address}}未来14天最高气温</view>
+    <view class="addressSearch">
+      <input placeholder="请输入" bindinput="inputChange" />
+      <button bindtap="search">查询</button>
+    </view>
+  </view>
+  <!-- 最高 -->
+  <view class="container">
+    <ec-canvas id="mychart-weather-high" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+  </view>
+  <!-- 最低 -->
+  <view class="WenCha" wx:if="{{DifferenceBetweenHighAndLow>10}}">
+    检测到未来五天中有温差较大情况,注意紫色描点,表温差最大情况。出行时请注意穿衣
+  </view>
+  <view class="container">
+    <ec-canvas id="mychart-weather-high_and_low" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+  </view>
+  <!--  -->
+  <view class="container">
+    <ec-canvas id="mychart-weather-area" canvas-id="mychart-funnel" ec="{{ ec }}"></ec-canvas>
+  </view>
+</view>
