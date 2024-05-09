@@ -1,2 +1,2 @@
 # weather-canvas
-weChat mini programme  weather
+weChat mini programme weather-canvas
